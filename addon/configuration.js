@@ -8,7 +8,8 @@ const DEFAULTS = {
     pageViewAttribute: 'url',
     attributeOverrides: {},
     LOG_EVENT_TRACKING: false,
-    token: null
+    token: null,
+    injectScript: true,
 };
 
 /**
@@ -92,6 +93,18 @@ export default {
       @public
     */
     LOG_EVENT_TRACKING: DEFAULTS.LOG_EVENT_TRACKING,
+
+    /**
+     * [injectScript description]
+     *
+     * @property injectScript
+     * @readOnly
+     * @static
+     * @type boolean
+     * @default true
+     * @public
+     */
+    injectScript: DEFAULTS.injectScript,
 
     load(config) {
         for (let property in this) {

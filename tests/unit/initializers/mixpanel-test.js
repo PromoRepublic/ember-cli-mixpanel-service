@@ -1,8 +1,9 @@
 import Ember from 'ember';
-import { default as mixpanel, initialize } from '../../../initializers/mixpanel';
+import { default as mixpanel } from '../../../initializers/mixpanel';
 import { module, test } from 'qunit';
 
-var container, application;
+let container, application;
+const initialize = mixpanel.initialize;
 
 module('MixpanelInitializer', {
   beforeEach: function() {
